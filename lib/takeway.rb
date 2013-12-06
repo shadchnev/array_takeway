@@ -27,19 +27,22 @@ def service_list
 	drinks.join(", and ")
 end 
 end
+#------------------------------------------------------------
+# 2nd Part - Placing the order
 
-# attr_reader:options
-#   def initialize(options = {})
-#     defaults = { :Bliny => 0, :Caviar => 0, :Kasha => 0, :Knish => 0}
-#     @options = defaults.merge(options)
-#   end
-#   def order_total
-#     total = Money.new(0, "GBP")
-#     options.each do |dish, quantity|
-#       total += MENU[dish] * quantity
-#     end
-#     total
-#   end
+# attr_reader :selection
+
+  def initialize
+    @selection
+  end
+
+  def order_total
+    total = Money.new(0, "GBP")
+    selection.each do |dish, quantity|
+      total += MENU[dish] * quantity
+    end
+    total
+  end
 #   def order_ok? (total)
 #     order_total == Money.new(total * 100, "GBP")
 #   end
