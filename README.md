@@ -1,1 +1,4 @@
-Friday Test. Creating Array and redinig methods
+Friday Test. 
+
+Creating Array and redefining methods
+1. 
